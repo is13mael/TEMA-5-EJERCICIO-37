@@ -1,5 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        try{
         System.out.print("Por favor, introduzca un número entero positivo: ");
         int numero = Integer.parseInt(System.console().readLine());
 
@@ -36,5 +37,10 @@ public class App {
         }
 
         System.out.printf("El %d en decimal es el %s en el sistema de palotes", numero, resultado);
+    }catch(NumberFormatException e){
+        System.out.println("Número mal introducido.");
+    }catch(Exception e){
+        System.out.println("Error inesperado.");
     }
+}
 }
